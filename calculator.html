@@ -3,6 +3,7 @@
 
 <head>
     <title>Calculator</title>
+     <!-- Styles for buttons -->
     <style>
         button {
             padding: 10px 20px;
@@ -24,99 +25,111 @@
 </head>
 
 <body>
+    <!-- Number buttons in rows -->
     <p>
         <button onclick="
               calculation += '1';
-              console.log(calculation);
+              display(calculation);
             ">1</button>
 
         <button onclick="
               calculation += '2';
-              console.log(calculation);
+              display(calculation);
             ">2</button>
 
         <button onclick="
               calculation += '3';
-              console.log(calculation);
+              display(calculation);
             ">3</button>
-
+<!-- Operator buttons -->
         <button onclick="
               calculation += ' + ';
-              console.log(calculation);
+              display(calculation);
             ">+</button>
     </p>
     <p>
         <button onclick="
               calculation += '4';
-              console.log(calculation);
+              display(calculation);
             ">4</button>
 
         <button onclick="
               calculation += '5';
-              console.log(calculation);
+              display(calculation);
             ">5</button>
 
         <button onclick="
               calculation += '6';
-              console.log(calculation);
+              display(calculation);
             ">6</button>
-
+<!-- Operator buttons -->
         <button onclick="
               calculation += ' - ';
-              console.log(calculation);
+              display(calculation);
             ">-</button>
     </p>
     <p>
         <button onclick="
               calculation += '7';
-              console.log(calculation);
+              display(calculation);
             ">7</button>
 
         <button onclick="
               calculation += '8';
-              console.log(calculation);
+              display(calculation);
             ">8</button>
 
         <button onclick="
               calculation += '9';
-              console.log(calculation);
+              display(calculation);
             ">9</button>
-
+<!-- Operator buttons -->
         <button onclick="
               calculation += ' * ';
-              console.log(calculation);
+              display(calculation);
             ">*</button>
     </p>
     <p>
         <button onclick="
               calculation += '0';
-              console.log(calculation);
+              display(calculation);
             ">0</button>
 
         <button onclick="
               calculation += '.';
-              console.log(calculation);
+              display(calculation);
             ">.</button>
-
+<!-- Operator buttons -->
         <button onclick="
               calculation = eval(calculation);
-              console.log(calculation);
+              display(calculation);
             ">=</button>
-
+<!-- Operator buttons -->
         <button onclick="
               calculation += ' / ';
-              console.log(calculation);
+              display(calculation);
             ">/</button>
     </p>
     <p>
         <button onclick="
               calculation = '';
-              console.log('Cleared.');
+              display('Cleared.');
             ">Clear</button>
     </p>
+
+    <!-- Operator buttons -->
+    <div id="result"></div>
     <script>
+        // Calculation variable
         let calculation = '';
+        // Display calculation on page 
+        function display() {
+            document.getElementById("result").innerHTML = calculation;
+        }
+
+
     </script>
+
 </body>
 
 </html>
